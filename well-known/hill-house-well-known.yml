@@ -1,0 +1,20 @@
+generated: '2026-07-19'
+method: searched
+source: live probe of https://hillhousehome.com/.well-known/*
+host: https://hillhousehome.com
+platform: Shopify
+documents:
+- path: /.well-known/openid-configuration
+  status: 200
+  file: hill-house-openid-configuration.json
+  note: Shopify Customer Account OIDC discovery (issuer shopify.com/authentication/9321794)
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  file: hill-house-oauth-authorization-server.json
+  note: RFC 8414 metadata (identical payload to the OIDC discovery document)
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404

@@ -1,7 +1,26 @@
 aid: hill-house
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hill-house.png
 name: Hill House
-description: Hill House is a company surfaced as a portfolio company of 8vc and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Hill House Home is a digital-first lifestyle brand that brings beauty and joy to everyday
+  rituals. Since launching with bedding in 2016 it has extended its collections to bath, baby,
+  accessories and apparel, including the widely beloved Nap Dress. The direct-to-consumer
+  storefront at hillhousehome.com runs on Shopify and exposes a live, public Storefront MCP
+  server (catalog search, cart, and store-policy tools) at /api/mcp, plus Shopify Customer
+  Account OAuth 2.0 / OpenID Connect discovery for customer-scoped access. Surfaced as an 8vc
+  portfolio company and enriched from its public commerce surface.
 url: https://raw.githubusercontent.com/api-evangelist/hill-house/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,9 +30,17 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- E-commerce
+- Retail
+- Home Goods
+- Apparel
+- Direct to Consumer
+- Consumer Brand
+- Shopify
+- MCP
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +48,31 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/hill-house-domain-security.yml
+- type: MCPServer
+  name: Hill House Home Storefront MCP
+  url: mcp/hill-house-mcp.yml
+- type: WellKnown
+  url: well-known/hill-house-well-known.yml
+- type: Authentication
+  url: authentication/hill-house-authentication.yml
+- type: OAuthScopes
+  url: scopes/hill-house-scopes.yml
 - type: Website
   url: https://hillhousehome.com
+- type: Login
+  url: https://hillhousehome.com/account/login
+- type: Support
+  url: https://hillhousehome.com/pages/contact
+- type: Blog
+  url: https://hillhousehome.com/blogs/news
+- type: PrivacyPolicy
+  url: https://hillhousehome.com/policies/privacy-policy
+- type: TermsOfService
+  url: https://hillhousehome.com/policies/terms-of-service
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
