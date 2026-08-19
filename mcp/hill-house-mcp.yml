@@ -9,20 +9,28 @@ server:
   url: https://hillhousehome.com/api/mcp
   protocol: Model Context Protocol (JSON-RPC 2.0)
   platform: Shopify Storefront MCP
-  note: >-
-    Live, unauthenticated Shopify Storefront MCP server exposing catalog search,
-    cart, and store-policy tools. Tools conform in part to the Universal Commerce
-    Protocol (UCP) catalog capability (dev.ucp.shopping.catalog.search). Not a
-    first-party Hill House build; provided by the Shopify commerce platform for
-    this store.
+  note: Live, unauthenticated Shopify Storefront MCP server exposing catalog search, cart, and store-policy
+    tools. Tools conform in part to the Universal Commerce Protocol (UCP) catalog capability (dev.ucp.shopping.catalog.search).
+    Not a first-party Hill House build; provided by the Shopify commerce platform for this store.
 tools:
 - name: search_catalog
-  description: Search products from the online store using natural-language queries and/or filters (categories, price range); paginated via cursor.
+  description: Search products from the online store using natural-language queries and/or filters (categories,
+    price range); paginated via cursor.
 - name: get_cart
   description: Get a cart by id, including items, shipping options, discount info, and checkout URL.
 - name: update_cart
-  description: Add/remove/update line items, buyer identity, delivery addresses, delivery options, discount and gift-card codes, and notes in one call; creates a cart when no cart_id is given.
+  description: Add/remove/update line items, buyer identity, delivery addresses, delivery options, discount
+    and gift-card codes, and notes in one call; creates a cart when no cart_id is given.
 - name: search_shop_policies_and_faqs
-  description: Answer questions about store policies, products, or services (returns, shipping, hours, phone number).
+  description: Answer questions about store policies, products, or services (returns, shipping, hours,
+    phone number).
 - name: get_product_details
   description: Look up a product by id and select a specific variant via options; supports localized country/language.
+deployment:
+  mode: remote
+  endpoint: https://hillhousehome.com/api/mcp
+  verified: probed
+  probe: live
+  tools: 5
+  checked: '2026-08-12'
+  source: catalog MCP census
