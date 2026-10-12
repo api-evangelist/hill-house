@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/hill-house/integrations
+- https://n8n.io/integrations/hill-house/
+- https://composio.dev/toolkits/hill-house
+- https://monid.ai/tools/hill-house
+checked:
+- https://composio.dev/toolkits/hill-house
+- https://monid.ai/tools/hill-house
+- https://n8n.io/integrations/hill-house/
+- https://zapier.com/apps/hill-house/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
